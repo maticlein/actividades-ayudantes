@@ -12,8 +12,8 @@ key = st.secrets['db_key']
 supabase: Client = create_client(url, key)
 
 #user
-email: str = "matthias.clein@ufrontera.cl"
-password: str = "ayudantesLIFIC"
+email: str = st.secrets['db_user_email']
+password: str = ['db_user_password']
 
 @st.cache_data
 def supabase_login():
