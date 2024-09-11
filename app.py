@@ -13,7 +13,7 @@ supabase: Client = create_client(url, key)
 
 #user
 email: str = st.secrets['db_user_email']
-password: str = ['db_user_password']
+password: str = st.secrets['db_user_password']
 
 @st.cache_data
 def supabase_login():
